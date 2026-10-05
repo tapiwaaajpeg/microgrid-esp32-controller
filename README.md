@@ -26,7 +26,7 @@ This project implements all three on a single ESP32, with commodity parts and no
 - **Live monitoring:** battery voltage, SMPS status, system current, Load 3 current, and relay states on an **SH1106 OLED** (U8g2), plus a serial telemetry line each cycle.
 - **Averaged sensing:** 200-sample ADC averaging for the ACS712 current sensors (about 14x noise reduction) and 50 samples for voltage.
 
-## Results
+## Results 
 
 Bench measurements from the project report (25 °C, fully charged 3S pack):
 
