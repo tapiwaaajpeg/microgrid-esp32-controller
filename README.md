@@ -164,22 +164,6 @@ L1:ON  L2:ON
 L3:ON(GRID)
 ```
 
-## Getting Started
-
-### Requirements
-
-- Arduino IDE 2.x (or PlatformIO)
-- ESP32 board support package (Espressif)
-- [U8g2](https://github.com/olikraus/u8g2) library (Library Manager)
-
-### Upload
-
-1. Wire the hardware as described above. **Verify all wiring before connecting the battery and motors.**
-2. Open `firmware/microgrid_controller/microgrid_controller.ino` in the Arduino IDE.
-3. Select **Tools → Board → ESP32 Dev Module** and the correct COM port.
-4. Install **U8g2** via the Library Manager.
-5. Upload, then open the Serial Monitor at **115200 baud** to watch telemetry and state-change messages.
-
 ### Why U8g2 and not Adafruit SSD1306?
 
 The SH1106 and SSD1306 OLED controllers have different internal memory layouts (132 vs 128 columns). The Adafruit SSD1306 library renders SH1106 panels shifted by two pixels. The U8g2 `U8G2_SH1106_128X64_NONAME_F_HW_I2C` constructor handles this correctly. If you use an SSD1306 panel instead, change the constructor accordingly.
@@ -208,8 +192,6 @@ Values are hard-coded and unit-specific; they will need to be re-derived for dif
 The prototype implements deterministic, threshold-based protection and optimisation logic on the ESP32. Machine-learning-based prediction and Wi-Fi/IoT telemetry are not part of the current firmware; the ESP32's wireless capability provides a path for adding them (see Future Work).
 
 ## References
-
-Selected sources from the project report:
 
 - Allegro MicroSystems (2013). *ACS712 Hall Effect-Based Linear Current Sensor IC* datasheet.
 - Espressif Systems (2023). *ESP32 Technical Reference Manual*.
